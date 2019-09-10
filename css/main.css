@@ -4,7 +4,7 @@ body {
 }
 
 i {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .bg-menu{
@@ -70,6 +70,11 @@ i {
     font-weight: bold;
     font-size: 13px;
     font-stretch: expanded;
+}
+
+.bg-firma {
+    background-color: #000000;
+    color: #FFF;
 }
 
 /** media query */
