@@ -4,7 +4,7 @@ body {
 }
 
 i {
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .bg-menu{
@@ -23,7 +23,7 @@ i {
 
 .navbar-light .navbar-nav .nav-link {
     color: #b2d8e6 !important;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
@@ -50,13 +50,18 @@ i {
 
 .footer-multisem{
     background-color: #007DAE;
-    padding: 24px 5px 24px 5px;
+    padding: 30px 5px 30px 5px;
     color: #FFF;
     font-size: 14px;
 }
 
 .footer-multisem a {
     text-decoration:none;
+    font-weight: bold;
+    color: #b2d8e6;
+}
+
+.footer-multisem a:hover {
     color: #FFF;
 }
 
@@ -88,6 +93,7 @@ i {
     font-size: 12px;
     
 }
+
 /**
 Paleta de colores corporativo
 
@@ -121,6 +127,7 @@ CLARO
 
 */
 
+
 /** media query */
 
 @media only screen and (max-width: 600px){
@@ -140,6 +147,13 @@ CLARO
         margin-top: 81px;
     }
 }
+
+@media only screen and (max-width: 992px){
+    .list-info-company {
+        padding-bottom: 24px;
+    }
+}
+
 
 /**
 Colores Corporativos
