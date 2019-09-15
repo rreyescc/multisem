@@ -14,6 +14,9 @@
     <link href="./css/fontawesome/css/brands.min.css" rel="stylesheet">
     <link href="./css/fontawesome/css/solid.min.css" rel="stylesheet">
 
+    <!-- Recaptcha - Google -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <!-- Bootstrap CSS -->
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -53,37 +56,92 @@
             </div>
         </nav>
     </header>
+    <section class="section-contactenos">
+        <section class="bg-light p-4">
+            <div class="container">
+                <h2>Contactenos</h2>
+            </div>
+        </section>
+        <div class="container">
+            <div class="row py-4">
+                <div class="col-12">
+                        <div id="alert"></div>
+                        <div class="form-group">
+                            <input type="text" id="nombre" class="form-control form-control-lg" placeholder="Nombre">
+                            <div class="invalid-feedback">Ingresar Nombre.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="telefono" class="form-control form-control-lg" placeholder="Teléfono">
+                            <div class="invalid-feedback">Ingresar Teléfono.
+                                </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="correo" class="form-control form-control-lg"
+                                placeholder="Correo">
+                            <div class="invalid-feedback">Ingresar Correo.</div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="mensaje" class="form-control form-control-lg" placeholder="Mensaje"
+                                rows="3"></textarea>
+                        </div>
+
+                        <!--<div class="g-recaptcha form-group" data-sitekey="6LfddrgUAAAAAGnMwtZ9QXxjCugJwkNs_idP29f3"></div>-->
+
+                        <button id="btnContacto" name="btnContacto" class="btn btn-primary btn-lg">Enviar</button>
+                </div>
+                <div class="col-12">
+
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
         <div class="footer-multisem">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-xl-6 pb-4">
-                        <h4 class="mb-4">Perú Multisem</h4>
+                    <div class="col-12 col-lg-6 list-info-company">
+                        <h4 class="mb-3">Perú Multisem</h4>
                         <ul>
                             <li>
-                                <i class="fas fa-map-marker-alt footer-icon"></i>
+                                <i class="fas fa-map-marker-alt footer-icon pr-4"></i>
                                 <span>Calle 19, Mz.181, Lote 18, Huascar 12, Sector A SJL - Lima</span>
                             </li>
                             <li>
-                                <i class="fas fa-phone-alt footer-icon"></i>
+                                <i class="fas fa-phone-alt footer-icon pr-3"></i>
                                 <span>(01) 387 3700</span>
                             </li>
                             <li>
-                                <i class="fas fa-envelope footer-icon"></i>
-                                <span>servicios@perumultisem.com</span>
+                                <i class="fas fa-mobile-alt footer-icon pr-4"></i>
+                                <span>
+                                    <a href="https://wa.me/51923743587?text=Hola,%20necesito%20información%20"
+                                        target="_blank">954587581</a>
+                                </span>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope footer-icon pr-3"></i>
+                                <span>
+                                    <a href="mailto:servicio@perumultisem.com">servicios@perumultisem.com</a>
+                                </span>
                             </li>
                         </ul>
                     </div>
-                    <div class="col-6 col-xl-3">
-                        <h4 class="mb-4">Mapa del Sitio</h4>
+                    <div class="col-6 col-lg-3 footer-nav">
+                        <h4 class="mb-3">Mapa del Sitio</h4>
                         <ul>
-                            <li><a href="">Inicio</a></li>
-                            <li><a href="">Servicios</a></li>
-                            <li><a href="">Contactenos</a></li>
+                            <li>
+                                <a href="/index.html">Inicio</a>
+                            </li>
+                            <li>
+                                <a href="/servicios.html">Servicios</a>
+                            </li>
+                            <li>
+                                <a href="/contactenos.html">Contactenos</a>
+                            </li>
                         </ul>
                     </div>
-                    <div class="col-6 col-xl-3">
-                        <h4 class="mb-4">Redes Sociales</h4>
+                    <div class="col-6 col-lg-3">
+                        <h4 class="mb-3">Redes Sociales</h4>
                         <ul class="list-inline">
                             <li class="list-inline-item">
                                 <a href="">
@@ -103,18 +161,16 @@
                         </ul>
                     </div>
                 </div>
-                <div id="firma" class="row mt-4 border-top pt-4" style="text-align: center">
-                    <div class="col">Diseño web <a href="http://wwww.solutechperu.com">SoluTech</a></div>
-                </div>
             </div>
+        </div>
+        <div class="text-center footer-credit">
+            Diseño Web <a href="http://wwww.solutechperu.com" target="_blank">SoluTech</a>
         </div>
     </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>

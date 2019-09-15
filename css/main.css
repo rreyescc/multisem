@@ -91,9 +91,17 @@ i {
     color: #FFF;
     font-weight: bold;
     font-size: 12px;
-    
 }
 
+.section-servicios {
+   /*position: relative;*/
+   /*top:56px;*/
+   padding-top: 56px;
+}
+
+.section-contactenos {
+    padding-top: 56px;
+}
 /**
 Paleta de colores corporativo
 
