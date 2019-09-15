@@ -15,7 +15,7 @@ $mensaje   = '<body>
 
 $cabeceras  = 'MIME-Version: 1.0' . "\r\n";
 $cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
-$cabeceras .= 'From: perumultisem.com <webmaster@perumultisem.com>' . "\r\n";
+$cabeceras .= 'From: perumultisem <webmaster@perumultisem.com>' . "\r\n";
 
 mail($para, $titulo, $mensaje, $cabeceras);
 ?>

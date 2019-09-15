@@ -35,7 +35,7 @@ $(document).ready(function(){
     function mostrarMensajeExito(){
         $('#alert').html(obtenerMensajeExito());
         setTimeout(function(){
-            $('.alert').alert('close').fadeOut('slow');
+            $('.alert').alert('close').fadeOut(2000);
         }, 5000);
     }
 
@@ -53,12 +53,14 @@ $(document).ready(function(){
     function validarFormulario(){
         return validarNombre() &&
                validarTelefono() &&
-               validarCorreo();
+               validarCorreo() &&
+               validarRecaptcha();
     }
 
     function validarNombre(){
         getElementNombre().removeClass('is-invalid');
         if(getElementNombre().val().trim() == ''){
+            getElementNombre().focus();
             getElementNombre().addClass('is-invalid');
             return false;
         }
@@ -68,6 +70,7 @@ $(document).ready(function(){
     function validarTelefono(){
         getElementTelefono().removeClass('is-invalid');
         if(getElementTelefono().val().trim() == ''){
+            getElementTelefono().focus();
             getElementTelefono().addClass('is-invalid');
             return false;
         }
@@ -77,10 +80,25 @@ $(document).ready(function(){
     function validarCorreo(){
         getElementCorreo().removeClass('is-invalid');
         if(getElementCorreo().val().trim() == ''){
+            getElementCorreo().focus();
             getElementCorreo().addClass('is-invalid');
             return false;
         }
         return true;
+    }
+
+    function validarRecaptcha(){
+        var response = grecaptcha.getResponse();
+        getElementCaptcha().css('display', 'none');
+        if(response.length == 0){
+            getElementCaptcha().css('display', 'block');
+            return false;
+        }
+        return true;
+    }
+
+    function getElementCaptcha(){
+        return $("#recaptcha-invalid");
     }
 
     function getElementNombre(){
