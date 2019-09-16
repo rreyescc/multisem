@@ -30,12 +30,13 @@ $(document).ready(function(){
         getElementTelefono().val('');
         getElementCorreo().val('');
         getElementMensaje().val('');
+        grecaptcha.reset();
     }
 
     function mostrarMensajeExito(){
         $('#alert').html(obtenerMensajeExito());
         setTimeout(function(){
-            $('.alert').alert('close').fadeOut(2000);
+            $('.alert').alert('close').fadeOut(3000);
         }, 5000);
     }
 
